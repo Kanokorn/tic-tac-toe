@@ -33,49 +33,49 @@ func main() {
 
 		if position[0] == value && position[1] == value && position[2] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[3] == value && position[4] == value && position[5] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[6] == value && position[7] == value && position[8] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[0] == value && position[3] == value && position[6] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[1] == value && position[4] == value && position[7] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[2] == value && position[5] == value && position[8] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[0] == value && position[4] == value && position[8] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
 		if position[2] == value && position[4] == value && position[6] == value {
 			displayTable(position)
-			fmt.Printf("Player %d win!!!!\n", player)
+			fmt.Printf("Player %d is a winner!!!\n", player)
 			return
 		}
 
