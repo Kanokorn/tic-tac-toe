@@ -21,101 +21,59 @@ func main() {
 		fmt.Printf("Player %d, enter a number: ", player)
 		fmt.Scanln(&input)
 		n, _ = strconv.Atoi(input)
+
+		if position[n-1] == 'X' || position[n-1] == 'O' {
+			fmt.Println("Please input again")
+			continue
+		}
+
 		position[n-1] = value
 
-		if position[0] == 'X' && position[1] == 'X' && position[2] == 'X' {
+		if position[0] == value && position[1] == value && position[2] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[3] == 'X' && position[4] == 'X' && position[5] == 'X' {
+		if position[3] == value && position[4] == value && position[5] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[6] == 'X' && position[7] == 'X' && position[8] == 'X' {
+		if position[6] == value && position[7] == value && position[8] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[0] == 'X' && position[3] == 'X' && position[6] == 'X' {
+		if position[0] == value && position[3] == value && position[6] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[1] == 'X' && position[4] == 'X' && position[7] == 'X' {
+		if position[1] == value && position[4] == value && position[7] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[2] == 'X' && position[5] == 'X' && position[8] == 'X' {
+		if position[2] == value && position[5] == value && position[8] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[0] == 'X' && position[4] == 'X' && position[8] == 'X' {
+		if position[0] == value && position[4] == value && position[8] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
-		if position[2] == 'X' && position[4] == 'X' && position[6] == 'X' {
+		if position[2] == value && position[4] == value && position[6] == value {
 			displayTable(position)
-			fmt.Println("Player 1 win!!!!")
-			return
-		}
-
-		if position[0] == 'O' && position[1] == 'O' && position[2] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[3] == 'O' && position[4] == 'O' && position[5] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[6] == 'O' && position[7] == 'O' && position[8] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[0] == 'O' && position[3] == 'O' && position[6] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[1] == 'O' && position[4] == 'O' && position[7] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[2] == 'O' && position[5] == 'O' && position[8] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[0] == 'O' && position[4] == 'O' && position[8] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
-			return
-		}
-
-		if position[2] == 'O' && position[4] == 'O' && position[6] == 'O' {
-			displayTable(position)
-			fmt.Println("Player 2 win!!!!")
+			fmt.Printf("Player %d win!!!!\n", player)
 			return
 		}
 
