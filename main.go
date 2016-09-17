@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strconv"
+
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -101,12 +103,24 @@ func main() {
 
 func displayTable(position [9]rune) {
 	fmt.Println("   :   :   ")
-	fmt.Printf(" %c : %c : %c \n", position[0], position[1], position[2])
+	fmt.Printf(" %s : %s : %s \n", setColorString(position[0]), setColorString(position[1]), setColorString(position[2]))
 	fmt.Println("___:___:___")
 	fmt.Println("   :   :   ")
-	fmt.Printf(" %c : %c : %c \n", position[3], position[4], position[5])
+	fmt.Printf(" %s : %s : %s \n", setColorString(position[3]), setColorString(position[4]), setColorString(position[5]))
 	fmt.Println("___:___:___")
 	fmt.Println("   :   :   ")
-	fmt.Printf(" %c : %c : %c \n", position[6], position[7], position[8])
+	fmt.Printf(" %s : %s : %s \n", setColorString(position[6]), setColorString(position[7]), setColorString(position[8]))
 	fmt.Println("   :   :   ")
+}
+
+func setColorString(value rune) string {
+	if value == 'X' {
+		return color.GreenString("%c", value)
+	}
+
+	if value == 'O' {
+		return color.RedString("%c", value)
+	}
+
+	return color.BlackString("%c", value)
 }
