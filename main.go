@@ -11,6 +11,7 @@ func main() {
 	position := [9]rune{'1', '2', '3', '4', '5', '6', '7', '8', '9'}
 	player := 1
 	value := 'X'
+	count := 0
 
 	fmt.Println("Tic Tac Toe")
 	fmt.Println("Player 1 (X) - Player 2 (O)")
@@ -23,11 +24,12 @@ func main() {
 		n, _ = strconv.Atoi(input)
 
 		if position[n-1] == 'X' || position[n-1] == 'O' {
-			fmt.Println("Please input again")
+			fmt.Println("That is not a valid move! Pease try again.")
 			continue
 		}
 
 		position[n-1] = value
+		count++
 
 		if position[0] == value && position[1] == value && position[2] == value {
 			displayTable(position)
@@ -74,6 +76,11 @@ func main() {
 		if position[2] == value && position[4] == value && position[6] == value {
 			displayTable(position)
 			fmt.Printf("Player %d win!!!!\n", player)
+			return
+		}
+
+		if count == 9 {
+			fmt.Println("It's a draw.")
 			return
 		}
 
