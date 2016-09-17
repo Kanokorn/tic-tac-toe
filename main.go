@@ -23,6 +23,11 @@ func main() {
 		fmt.Scanln(&input)
 		n, _ = strconv.Atoi(input)
 
+		if n < 1 || n > 9 {
+			fmt.Println("That is not a valid number! Please input only 1-9.")
+			continue
+		}
+
 		if position[n-1] == 'X' || position[n-1] == 'O' {
 			fmt.Println("That is not a valid move! Pease try again.")
 			continue
